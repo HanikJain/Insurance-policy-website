@@ -1,0 +1,16 @@
+<% if (error){%>
+  <div class="alert alert-primary" id = "alert" role="alert">
+    <%= error_msg%>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="check()"></button>
+  </div>
+<%}%>
+
+
+
+<script type="text/javascript">
+
+   function check(){
+        document.getElementById("alert").style.display = "none";  
+    }
+
+</script>

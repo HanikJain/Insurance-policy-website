@@ -1,0 +1,71 @@
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+:root{
+    --primary-color : #0051ec;
+    --secondary-color : #ffc107;
+}
+
+.navigation-bar{
+       position: relative;
+       width: 100%;
+       display: grid;
+       grid-template-columns: 15% 1fr  1fr 1fr  50%;
+       grid-template-rows: 1fr;
+       height: 9vh;
+       background-color: var(--primary-color);
+       font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+.nav-title{
+    padding: 8% 10% ;
+    font-weight:900;
+    color: #ffffff;
+
+}
+
+.nav-items{
+    padding: 12% 0% ;
+    text-align: center;
+
+}
+
+.nav-items a {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-items a:hover{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+
+}
+
+
+.nav-buttons{
+    padding: 1.1% 4%;
+
+}
+
+/* NAVBAR CSS END */
+
+
+.card{
+    margin: 100px auto auto;
+}
+
+.card-body{
+        margin-left: 80px;
+}

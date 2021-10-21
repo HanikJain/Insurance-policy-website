@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Payment</title>
+        <link rel="stylesheet" href="CSS/payment.css">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+
+    </head>
+    <body>
+        <form class="" action="/payment" method="post">
+
+
+        <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Payment Details
+                    </h3>
+
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                    <div class="form-group">
+                        <label for="cardNumber">
+                            CARD NUMBER</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                required autofocus />
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                     <div class="col-xs-7 col-md-7">
+                         <div class="form-group">
+                             <label for="expityMonth">
+                                 EXPIRY DATE</label>
+                             <div class="col-xs-6 col-lg-6 pl-ziro">
+                                 <input type="number" class="form-control" minlength="2" maxlength="2" size="2" id="expityMonth" placeholder="MM" required />
+                             </div>
+                             <div class="col-xs-6 col-lg-6 pl-ziro">
+                                 <input type="number" class="form-control" minlength="2" maxlength="2" size="2" id="expityYear" placeholder="YY" required /></div>
+                         </div>
+                     </div>
+                     <div class="col-xs-5 col-md-5 pull-right">
+                         <div class="form-group">
+                             <label for="cvCode">
+                                 CVV CODE</label>
+                             <input type="password" inputmode="numeric" minlength="3" maxlength="3" size="3" class="form-control" id="cvCode" placeholder="CVV" required />
+                         </div>
+                     </div>
+                 </div>
+                 </form>
+             </div>
+         </div>
+
+         <br/>
+        <button class="btn btn-lg btn-primary btn-block" name="button" onclick="check()" type="submit">Pay</button>
+     </div>
+ </div>
+</div>
+</form>
+
+<script type="text/javascript">
+    function check(){
+        var card=document.getElementById('cardNumber').value;
+        if(card.length != 12){
+            document.getElementById('cardNumber').value="";
+        }
+        var cvvcode=document.getElementById("cvCode").value
+
+        const number=['0','1','2','3','4','5','6','7','8','9']
+
+          if(cvvcode.length != 3){
+              document.getElementById('cvCode').value="";
+          }else{
+          for(var i=0;i<3;i++){
+              var checkCVV=0;
+
+              for (var j = 0; j < number.length; j++) {
+                 if (cvvcode[i]===number[j]){
+                     checkCVV=1;
+                 }
+              }
+
+              if(checkCVV===0){
+                  document.getElementById('cvCode').value="";
+                  break;
+              }
+
+          }
+
+      }
+
+      const month=['10','01','02','03','04','05','06','07','08','09','11','12']
+      var checkmonth=document.getElementById('expityMonth').value
+      var checkmonthnumber=0
+      for (var i = 0; i < month.length; i++) {
+                    if(checkmonth=== month[i]){
+                        checkmonthnumber=1
+                        break;
+                    }
+
+      }
+      if (checkmonthnumber===0) {
+          document.getElementById('expityMonth').value=""
+      }
+
+      var checkyear=document.getElementById('expityYear').value
+      var checkyearnumber=0
+      if(21<parseInt(checkyear) && parseInt(checkyear)<100){
+          checkyearnumber=1
+      }else{
+          document.getElementById('expityYear').value=""
+      }
+
+}
+
+
+</script>
+    </body>
+</html>

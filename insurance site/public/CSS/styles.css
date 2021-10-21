@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary-color : #0051ec;
+    --secondary-color : #ffc107;
+}
+
+.footer{
+    background-color:var(--primary-color);
+    /* position: fixed; */
+    height: 300px;;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 75% 1fr ;
+
+ }
+
+ .footer-row-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 35%;
+    grid-template-rows: 35% 1fr;
+
+ }

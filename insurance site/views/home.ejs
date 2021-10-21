@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/navigationBar.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/colngrid.css">
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <!-- BOOTSTARP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+
+
+</head>
+<body>
+                          <!-- NAVBAR -->
+    <div class="navigation-bar" >
+        <span class="nav-title" >Jain Allianz</span>
+        <span class="nav-items"><a href="/">Home</a></span>
+
+        <span class="nav-items"><a href="#Aboutus">About us</a></span>
+        <span class="nav-items"><a href="#contact">Contact us </a></span>
+
+        <span class="nav-buttons">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <% if (login){%>
+                <button class="btn btn-warning me-md-2" type="button" id="signup">Register</button>
+                <button class="btn btn-warning" type="button" id="login">Login</button>
+                <%} else {%>
+                    Welcome !
+                    <%}%>
+              </div>
+        </span>
+
+    </div>
+
+                           <!-- 2coln grid -->
+
+    <div class="twocoln_main">
+        <div class="twocoln_column1">
+            <img src="https://static.pbcdn.in/cdn/images/home-v1/pb-promise-new.png" alt="" id="twocoln_image0">
+        </div>
+        <div class="twocoln_column2">
+            <div>
+            <h1 id="twocoln_header">Let's find you </h1>
+            <h1 id="twocoln_header">the <b>Best Insurance</b></h1>
+
+           <div id="twocoln_description">
+
+           </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    <!-- Insurance card -->
+    <div class="insurance_card_title">
+        All types of insurance at lowest premium.
+    </div>
+    
+    <section class="basic-grid">
+        <% let array = ["https://png.pngtree.com/png-vector/20200604/ourmid/pngtree-health-insurance-online-flat-illustration-png-image_2218758.jpg", "https://png.pngtree.com/png-vector/20200310/ourmid/pngtree-car-insurance-design-concept-with-umbrella-protection-png-image_2158397.jpg", "https://img.freepik.com/free-vector/illustration-people-with-travel-insurance_53876-37192.jpg?size=626&ext=jpg","https://img.freepik.com/free-vector/illustration-family-life-insurance_53876-40781.jpg?size=626&ext=jpg"]%>
+        <% let arr = ["Health", "Car", "Travel", "Life"]%>
+        <% for (var i = 0; i < 4 ; i++) { %>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=<%= array[i] %> alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><h5> <%= arr[i] %> Insurance</h5>
+              <p class="card-text">Compare and find best insurance for you .</p>
+              <a href="/buyinsurance" class="btn btn-warning">learn more</a>
+            </div>
+          </div>
+        
+        <%}%>
+    </section>
+    <!-- <div class="insurance_card">2</div>
+        <div class="insurance_card">3</div>
+        <div class="insurance_card">4</div>
+        <div class="insurance_card">5</div>
+        <div class="insurance_card">6</div>
+        <div class="insurance_card">7</div>
+        <div class="insurance_card">8</div> -->
+    <div class="insurance_card_title">
+       
+        <a href=""> Show more -></a>
+    </div>
+
+
+
+    <section id="Aboutus">
+      <h1 class="h1-Aboutus">About US</h1>
+
+    <p  class="p-Aboutus">Our core Values are Customer First, Humility, Passion, Integrity, and Boundarylessness. Values guide our actions and define the way we work. We encourage all our colleagues to exemplify and role model the Values.</p>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+       <div class="h1-contact">
+       <h2 class="h2-contact">Contact Us</h2>
+       <div class="icons" >
+         <!-- <i class="far fa-envelope icons-f"></i>
+         <i class="fab fa-whatsapp icons-f"></i>
+         <i class="fab fa-telegram icons-f"></i>
+         <i class="fas fa-file-contract icons-f"></i> -->
+         Email : tcet@thakureducation.org
+       </div>
+
+        </div>
+
+    </section>
+
+
+    <script type="text/javascript">
+        document.getElementById("signup").onclick = function () {
+        console.log(location.href);
+        location.href = "users/register";
+        console.log(location.href);
+    };
+    document.getElementById("login").onclick = function () {
+    location.href = "users/login";
+};
+
+    </script>
+</body>
+
+</html>

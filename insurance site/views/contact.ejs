@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V9</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="util.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+
+:root{
+    --primary-color : #0051ec;
+    --secondary-color : #ffc107;
+}
+
+
+.card{
+	margin: auto;
+}
+
+.navigation-bar{
+       position: relative;
+       width: 100%;
+       display: grid;
+       grid-template-columns: 15% 1fr 1fr  1fr  50%;
+       grid-template-rows: 1fr;
+       height: 9vh;
+       background-color: var(--primary-color);
+       font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+.nav-title{
+    padding: 8% 10% ;
+    font-weight:900;
+    color: #ffffff;
+
+}
+
+.nav-items{
+    padding: 12% 0% ;
+    text-align: center;
+
+}
+
+.nav-items a {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-items a:hover{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+
+}
+
+
+.nav-buttons{
+    padding: 1.1% 4%;
+
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+	
+	  <div class="navigation-bar" >
+
+		<span class="nav-title" >Contact us</span>
+		<span class="nav-items"><a href="/">Home</a></span>
+		<span class="nav-items"><a href="buyinsurance">Buy Insurance</a></span>
+
+		<span class="nav-items"><a href="contactus">Contact us </a></span>
+
+		<span class="nav-buttons">
+		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+		<a class="btn btn-danger" href="/logout" role="button">Log out</a>
+
+		</div>
+		</span>
+
+		</div>
+
+	  <div class="card" style="width: 32rem;">
+		<img class="card-img-top" src="https://images.shiksha.com/mediadata/images/1489300063phpA1CPrW_g.jpg" alt="Card image cap">
+		<div class="card-body">
+		  <h5 class="card-title">Contact Us</h5>
+		  <p class="card-text">A-Block, Thakur Educational Campus,<br> Shyamnarayan Thakur Marg, Thakur Village,<br /> Kandivali East, Mumbai, Maharashtra 400101</p>
+		  <button class="login100-form-btn" style="justify-content: center;" onclick="myclick()" >
+			Email us
+		</button>
+		</div>
+	  </div>
+<script >
+	function myclick(){
+		alert("Email : tcet@thakureducation.org")
+	}
+</script>
+</body>
+</html>

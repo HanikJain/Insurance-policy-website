@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/CSS/home.css">
+
+        <!-- BOOTSTARP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+
+    </head>
+    <body>
+        <!-- NAVBAR -->
+            <div class="navigation-bar" >
+
+                <span class="nav-title" >Home</span>
+                <span class="nav-items"><a href="/">Home</a></span>
+                <span class="nav-items"><a href="/buyInsurance">Buy Insurance</a></span>
+
+                <span class="nav-items"><a href="/contactus">Contact us </a></span>
+
+                <span class="nav-buttons">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a class="btn btn-danger" href="/logout" role="button">Log out</a>
+
+                </div>
+                </span>
+
+            </div>
+
+            <h1>Your Insurance</h1>
+
+
+       
+
+<script type="text/javascript">
+    function installmentCount(){
+
+        alert("Worked")
+        var count=document.getElementById('container_installment').value
+        alert(count)
+        document.getElementById('container_installment').value=parseInt(count)-1;
+        alert("Worked2")
+    }
+
+</script>
+
+    </body>
+</html>
