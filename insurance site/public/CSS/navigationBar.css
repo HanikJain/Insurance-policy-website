@@ -9,6 +9,56 @@
   --secondary-color : #ffc107;
 }
 
+
+.dropdown-d{
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 70%;
+}
+
+.dropdown-d-focus{
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 70%;
+}
+
+
+.dropdown{
+  width: 200px;
+  height: 40px;
+  display : flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 1px 1px 3px 1px var(--secondary-color);
+  padding: 0;
+}
+
+
+
+ul{
+  list-style-type:none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .navigation-bar{
        position:fixed;
        width: 100%;

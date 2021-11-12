@@ -24,7 +24,10 @@
                           <!-- NAVBAR -->
     <div class="navigation-bar" >
         <span class="nav-title" >Jain Allianz</span>
-        <span class="nav-items"><a href="/">Home</a></span>
+        <div class="nav-items">
+            <a href="/" id="theme" onclick="fun()">Theme</a>
+           
+        </div>
 
         <span class="nav-items"><a href="#Aboutus">About us</a></span>
         <span class="nav-items"><a href="#contact">Contact us </a></span>
@@ -41,6 +44,7 @@
         </span>
 
     </div>
+    
 
                            <!-- 2coln grid -->
 
@@ -122,6 +126,12 @@
 
 
     <script type="text/javascript">
+        function fun() {
+            // document.getElementsByClassName("dropdown-d").style.display = "block";
+            // document.getElementsByClassName("dropdown-d").removeClass('dropdown-d');
+            // document.getElementsByClassName("dropdown-d").addClass('selected');
+        }
+
         document.getElementById("signup").onclick = function () {
         console.log(location.href);
         location.href = "users/register";
