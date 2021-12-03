@@ -5,8 +5,8 @@ This is the first version v1.0 of this project. More features and update will co
 
 ## Key features
 Insurance policy website where you can buy insurance.
-Use of Authentication, encryption, cookies to make user details secured and
-experience excellent.
+Use of Authentication, encryption, cookies to make user details are secured and
+experience is excellent.
 Validation on every page.
 Use of MongoDB.
 
